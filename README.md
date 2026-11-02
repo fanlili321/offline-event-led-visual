@@ -25,3 +25,13 @@
 ## 模板授权
 
 `assets/` 中的图片来自项目内部已确认的活动样式。使用、再分发和公开仓库权限应由素材权利人确认。
+
+## 命令行使用
+
+安装 Python 依赖：`python3 -m pip install pillow opencv-python numpy`。运行：
+
+```bash
+python3 generate.py --city 长沙 --date 2026-11-01 --time '上午、下午' --out ./outputs
+```
+
+脚本当前内置两类场次的封面和正文模板。目录页需要单独确认的目录模板；请勿把正文图当目录图。中文字体优先使用本机的阿里巴巴普惠体粗体，其他机器需修改 `generate.py` 的 `FONT` 路径为可用的中文粗体字体。
